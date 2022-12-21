@@ -28,14 +28,11 @@ else:
         max = 0
         min = 1
         for i in range(len(new_list)):
-            # fractional_parts_list.append(str(round(fabs(new_list[i]) % 1),5).removeprefix('0.'))
             fractional_parts_list.append((fabs(new_list[i]) % 1))
-            # fractional_parts_list[i] = int(fractional_parts_list[i])
             if fractional_parts_list[i] > max:
                 max =fractional_parts_list[i]
             elif fractional_parts_list[i] < min:
                 min = fractional_parts_list[i]
-        # print(fractional_parts_list)
         print(f'Max fractional part value of elements = {round(max,3)}')
         print(f'Min fractional part value of elements = {round(min,3)}')
         diff = max - min
